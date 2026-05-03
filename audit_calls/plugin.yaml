@@ -1,6 +1,6 @@
 name: audit_calls
 version: 1.0.0
-description: Protokolliert Toolaufrufe
+description: Audit Tool and LLM calls
 provides_hooks:
   - post_tool_call
   - post_api_request

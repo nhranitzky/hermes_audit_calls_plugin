@@ -18,6 +18,29 @@ It registers two hooks:
 - If you use profiles, copy `audit_calls` to the `plugins` folder of each profile home
 - Restart Hermes
 
+## Enable the plugin
+
+- Check if the plugin is detected:
+
+```bash
+hermes plugins list
+```
+
+- Enable the plugin
+
+```bash
+hermes plugins enable audit_calls
+```
+
+- Or you can update the `config.yaml`:
+
+```yaml
+plugins:
+  disabled: []
+  enabled:
+  - audit_calls
+```
+
 ## Log file
 
 Each profile writes its own log to `$HERMES_HOME/logs/audit_calls.log`.
