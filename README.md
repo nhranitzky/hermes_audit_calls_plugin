@@ -1,4 +1,4 @@
-# Hermes Audit Calls Plugin
+# Hermes Audit to File Plugin
 
 This is a [Hermes Hook Plugin](https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks#plugin-hooks) that logs tool calls and LLM API calls as an audit trail.
 
@@ -14,8 +14,8 @@ It registers two hooks:
 ## Installation
 
 - Clone or download this repository
-- Copy the folder `audit_calls` to `$HERMES_HOME/plugins`
-- If you use profiles, copy `audit_calls` to the `plugins` folder of each profile home
+- Copy the folder `audit_to_file` to `$HERMES_HOME/plugins`
+- If you use profiles, copy `audit_to_file` to the `plugins` folder of each profile home
 - Restart Hermes
 
 ## Enable the plugin
@@ -29,7 +29,7 @@ hermes plugins list
 - Enable the plugin
 
 ```bash
-hermes plugins enable audit_calls
+hermes plugins enable audit_to_file
 ```
 
 - Or you can update the `config.yaml`:
@@ -38,12 +38,12 @@ hermes plugins enable audit_calls
 plugins:
   disabled: []
   enabled:
-  - audit_calls
+  - audit_to_file
 ```
 
 ## Log file
 
-Each profile writes its own log to `$HERMES_HOME/logs/audit_calls.log`.
+Each profile writes its own log to `$HERMES_HOME/logs/audit.log`.
 
 ```
 2026-05-03 15:12:12,118 INFO LLM_CALL  => session=20260503_151207_61f3a268, model=openai-codex/gpt-5.5, api_calls=1, api_duration=4.0575408935546875 (s), tool_calls=1, usage={'input_tokens': 14439, 'output_tokens': 40, 'cache_read_tokens': 0, 'cache_write_tokens': 0, 'reasoning_tokens': 19, 'request_count': 1, 'prompt_tokens': 14439, 'total_tokens': 14479}, chars=0, rest={'platform': 'telegram', 'message_count': 2, 'response_model': 'gpt-5.5'}

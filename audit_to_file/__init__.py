@@ -36,7 +36,7 @@ def _initialize_logger(log_file: Path) -> logging.Logger:
     return logger
 
 _, PROFILE_HOME, _ = get_hermes_profile()
-LOG_FILE = PROFILE_HOME / "logs" / "audit_calls.log"
+LOG_FILE = PROFILE_HOME / "logs" / "audit.log"
 logger = _initialize_logger(LOG_FILE)
 
 

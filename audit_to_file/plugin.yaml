@@ -1,6 +1,6 @@
-name: audit_calls
+name: audit_to_file
 version: 1.0.0
-description: Audit Tool and LLM calls
+description: Audit Tool and LLM calls to log file
 provides_hooks:
   - post_tool_call
   - post_api_request
